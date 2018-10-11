@@ -1,0 +1,25 @@
+{{#each errors}}
+<div class="alert alert-danger">{{text}}</div>
+{{else}}
+
+{{/each}}
+
+<div class="card card-body">
+    <h3>Edit Video Ideas</h3>
+    <form method="post" action="/ideas/{{idea.id}}?_method=PUT">
+        <input type="hidden" name="_method" value="PUT">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" name="title" value="{{idea.title}}" required>
+            {{!-- For client-side validation we put required --}}
+        </div>
+
+        <div class="form-group">
+            <label for="deatails">Details</label>
+            <textarea type="text" class="form-control" name="details" required>{{idea.details}}</textarea>
+            {{!-- required for client side validation --}}
+        </div>
+
+        <button type="submit" class="btn btn-primary"> Submit </button>
+    </form>
+</div>
