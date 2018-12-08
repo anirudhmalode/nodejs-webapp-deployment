@@ -1,3 +1,6 @@
+/* app.js ----- It consists of all the modules which are required & installed for 
+               this project & all middlewares for the required modules. */
+
 const express = require("express");
 const path = require("path");
 const exphbs = require("express-handlebars"); // express-handlebars for handling templates,views 3rd p. plugin

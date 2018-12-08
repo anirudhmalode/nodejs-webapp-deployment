@@ -1,3 +1,6 @@
+/* A Schematic for the ideas in the project includes, title, details,
+   user(user_ids--individuals), date */
+
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 

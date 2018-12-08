@@ -1,3 +1,5 @@
+/* A Schematic for the Users in the project includes, name, email, password, date */
+
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
