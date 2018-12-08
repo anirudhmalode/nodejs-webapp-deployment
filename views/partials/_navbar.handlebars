@@ -1,4 +1,4 @@
-{{!-- _defines it is partial not the full(Whole navbar is present here) --}}
+{{!-- Navbar pesents at each page --}}
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
     <div class="container">
@@ -13,8 +13,10 @@
                 <a class="nav-item nav-link" href="/about">About</a>
             </div>
             <ul class="navbar-nav ml-auto">
-                {{#if user}}
 
+                {{!-- If user is logged in will shows if block --}}
+
+                {{#if user}}
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="navbarDropdownMenuLink">Video
                         Ideas</a>
@@ -26,7 +28,7 @@
                 <li class="nav-item">
                     <a href="/users/logout" class="nav-link">LogOut</a>
                 </li>
-
+                {{!-- If user isnot logged in shows else block --}}
                 {{else}}
                 <li class="nav-item">
                     <a href="/users/login" class="nav-link">Login</a>

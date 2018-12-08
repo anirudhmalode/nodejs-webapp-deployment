@@ -8,6 +8,10 @@
 
 <div class="card card-body">
     <h3>Edit Video Ideas</h3>
+    {{!-- method-override, overiding on the post method to edit/make changes at server side - PUT method 
+                                                           Remove/ to remove ideas - DELETE method
+                                                           To get any info from server by /*** - get method
+                                                           To post any info on server side - post method--}}
     <form method="post" action="/ideas/{{idea.id}}?_method=PUT">
         <input type="hidden" name="_method" value="PUT">
         <div class="form-group">

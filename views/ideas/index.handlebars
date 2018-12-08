@@ -1,5 +1,6 @@
 {{!-- Showing all the ideas given --}}
 
+{{!-- If ideas available, each block can edit/delete --}}
 {{#each ideas}}
 <div class="card card-body mb-2">
     <h4>{{title}}</h4>
@@ -11,5 +12,6 @@
     </form>
 </div>
 {{else}}
+{{!-- If there is no idea --}}
 <p>No video ideas listed</p>
 {{/each}}

@@ -21,6 +21,8 @@ router.get("/", ensureAuthenticated, (req, res) => {
     });
 });
 
+// ensureAuthenticated - at each step to protect from redirecting directly to page via URL
+
 // Add Idea Form
 router.get("/add", ensureAuthenticated, (req, res) => {
   res.render("ideas/add"); // add.handlebars
@@ -45,16 +47,17 @@ router.get("/edit/:id", ensureAuthenticated, (req, res) => {
 
 // Process Form
 router.post("/", ensureAuthenticated, (req, res) => {
-  // server side validation
+  // server side validation factors
   let errors = [];
-
+// Factor 1
   if (!req.body.title) {
     errors.push({ text: "Please add a title" });
   }
+// Factor 2
   if (!req.body.details) {
     errors.push({ text: "Please add some details" });
   }
-
+// Factor 3
   if (errors.length > 0) {
     res.render("ideas/add", {
       errors: errors,

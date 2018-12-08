@@ -1,5 +1,7 @@
 // Mongodb db configuration
 
+// Here, the mlab db collection url is used but, can be accessed on localhost too.
+
 if (process.env.NODE_ENV === "production") {
   module.exports = {
     mongoURI:

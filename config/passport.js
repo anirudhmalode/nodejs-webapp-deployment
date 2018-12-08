@@ -30,6 +30,8 @@ module.exports = function(passport) {
       });
     })
   );
+
+  // Serialize & deserialize so that, the ideas will not be shown to other users.
   passport.serializeUser(function(user, done) {
     done(null, user.id);
   });
